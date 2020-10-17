@@ -59,6 +59,8 @@ namespace Xadrez
 
 
                 }
+                Console.Clear();
+                Tela.imprimirPartida(partida);
 
                 
             }
