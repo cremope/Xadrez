@@ -25,58 +25,58 @@ namespace xadrez
             Posicao pos = new Posicao(0, 0);
 
             //Noroeste
-            posicao.definirValores(posicao.linha - 1, posicao.coluna - 1);
+            pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
-                mat[posicao.linha, posicao.coluna] = true;
-                if (tab.peca(pos) != null && tab.peca(pos).cor !=cor)
+                mat[pos.linha, pos.coluna] = true;
+                if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                 {
                     break;
 
                 }
-                posicao.definirValores(pos.linha - 1, pos.coluna - 1);
+                pos.definirValores(pos.linha - 1, pos.coluna - 1);
 
             }
 
             //Nordeste
-            posicao.definirValores(posicao.linha - 1, posicao.coluna + 1);
+            pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
-                mat[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                 {
                     break;
 
                 }
-                posicao.definirValores(pos.linha - 1, pos.coluna + 1);
+                pos.definirValores(pos.linha - 1, pos.coluna + 1);
 
             }
 
             //Sudeste
-            posicao.definirValores(posicao.linha + 1, posicao.coluna + 1);
+            pos.definirValores(posicao.linha + 1, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
-                mat[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                 {
                     break;
 
                 }
-                posicao.definirValores(pos.linha + 1, pos.coluna + 1);
+                pos.definirValores(pos.linha + 1, pos.coluna + 1);
 
             }
 
             //Sudoeste
-            posicao.definirValores(posicao.linha + 1, posicao.coluna - 1);
+            pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
-                mat[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                 {
                     break;
 
                 }
-                posicao.definirValores(pos.linha + 1, pos.coluna - 1);
+                pos.definirValores(pos.linha + 1, pos.coluna - 1);
 
             }
 
